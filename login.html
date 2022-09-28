@@ -5,10 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大事件login</title>
+    <title>大事件-登录/注册</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
 </head>
 
 <body>
+    <!-- 头部logo区域 -->
+    <div class="layui-main">
+        <img src="assets/images/logo.png" alt="">
+    </div>
+    <!-- 登录注册区域 -->
+    <div class="loginAndRegest">
+        <div class="titlt_box">大事件后台管理系统</div>
+        <!-- 登录div -->
+        <div class="login">
+            <!-- 登录表单 -->
+            <form class="layui-form" action="" id="form_login">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" id="uname" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input"
+                        style="opacity: .8; background-color: #9296b9; color: #fff;">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" id="upsd" required lay-verify="required|pwd"
+                        placeholder="请输入密码" autocomplete="off" class="layui-input"
+                        style="opacity: .8; background-color: #9296b9; color: #fff;">
+                </div>
+                <!-- 按钮 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn  layui-btn-fluid" lay-submit lay-filter="formDemo"
+                        style="background-color: #8a90b0;">立即登录</button>
+
+                </div>
+            </form>
+            <div class="layui-form-item links">
+                <a href="javascropt:;" id="link_red">点击去注册</a>
+            </div>
+        </div>
+        <!-- 注册div -->
+        <div class="red">
+            <!-- 注册表单 -->
+            <form class="layui-form" id="form_red">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="uname" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input"
+                        style="opacity: .8; background-color: #9296b9; color: #fff;">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input"
+                        style="opacity: .8; background-color: #9296b9; color: #fff;">
+                </div>
+                <!-- 密码确认 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd"
+                        placeholder="再次确认密码" autocomplete="off" class="layui-input"
+                        style="opacity: .8; background-color: #9296b9; color: #fff;">
+                </div>
+                <!-- 按钮 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn  layui-btn-fluid" lay-submit lay-filter="formDemo"
+                        style="background-color: #8a90b0;">立即注册</button>
+
+                </div>
+            </form>
+            <div class="layui-form-item links">
+                <a href="javascropt:;" id="link_login">点击去登录</a>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/lib/layui/layui.all.js"></script>
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/js/baseAPI.js"></script>
+    <script src="assets/js/login.js"></script>
 
 </body>
 
