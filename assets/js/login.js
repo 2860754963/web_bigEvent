@@ -78,7 +78,7 @@ $(function () {
                 layer.msg('注册成功,请登录', { icon: 1 });
                 console.log(res.token);
                 localStorage.setItem('token', res.token)
-                // location.href = '/index.html'
+                location.href = '/index.html'
             }
         })
 
