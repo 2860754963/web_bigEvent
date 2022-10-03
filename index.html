@@ -29,9 +29,9 @@
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="./user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="./user/user_avater.html" target="fm">更换头像</a></dd>
+                        <dd><a target="fm" href="./user/user_pwd.html">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
@@ -50,7 +50,7 @@
                         <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
                             class="layui-nav-img">
                         <span class="zimu">A</span>
-                        <span id="welcome">欢迎<i></i></span>
+                        <span id="welcome">欢迎&nbsp;<i></i>~</span>
                     </div>
                     <li class="layui-nav-item layui-nav-itemed layui-this">
                         <a class="" href="home/dashboard.html" target="fm"><span
@@ -69,9 +69,12 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;" class=""><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;" class=""><i class="layui-icon">&#xe614;</i>基本资料</a></dd>
-                            <dd><a href="javascript:;" class=""><i class="layui-icon">&#xe614;</i>更换头像</a></dd>
-                            <dd><a href="javascript:;" class=""><i class="layui-icon">&#xe614;</i>重置密码</a></dd>
+                            <dd><a href="./user/user_info.html" target="fm" class=""><i
+                                        class="layui-icon">&#xe614;</i>基本资料</a></dd>
+                            <dd><a href="./user/user_avater.html" class="" target="fm"><i
+                                        class="layui-icon">&#xe614;</i>更换头像</a></dd>
+                            <dd><a href="./user/user_pwd.html" target="fm" class=""><i
+                                        class="layui-icon">&#xe614;</i>重置密码</a></dd>
 
                         </dl>
                     </li>
@@ -85,7 +88,8 @@
 
             <!-- 这里通过ifream 来显示不同的标签 -->
 
-            <iframe src="home/dashboard.html" name="fm" frameborder="0">
+            <!-- <iframe src="home/dashboard.html" name="fm" frameborder="0"> -->
+            <iframe src="./user/user_avater.html" name="fm" frameborder="0">
 
             </iframe>
 
@@ -94,12 +98,12 @@
 
         </div>
 
-        <div class="layui-footer">
+        <div class="layui-footer" style="background-color: #695f68;">
             <!-- 底部固定区域 -->
             © www.nigulasi.com - 尼古拉丝
         </div>
     </div>
-    <script src="./layui/layui.js"></script>
+
 
     <script src="assets/lib/layui/layui.all.js"></script>
     <script src="assets/lib/jquery.js"></script>

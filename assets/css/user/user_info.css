@@ -1,0 +1,56 @@
+body,
+html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: #7d7079;
+    padding: 20px;
+}
+
+h2 {
+    margin: 10px;
+    margin-bottom: 20px;
+
+}
+
+.banxin {
+
+    margin: 0 auto;
+
+    height: 260px;
+    width: 80%;
+}
+
+/* #xinxi div {
+    margin-left: 35px;
+}
+
+#xinxi div input {
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 30px;
+    width: 150px;
+} */
+.layui-form-item {
+    margin: 10px;
+}
+
+.layui-form-item label {
+    text-align: left;
+}
+
+.layui-input-block input {
+    background-color: #7d7079;
+    width: 80%;
+}
+
+
+
+.layui-form button {
+
+    margin-left: 30%;
+}

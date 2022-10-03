@@ -17,11 +17,11 @@ $(function () {
     let layer = layui.layer
     //点击退出
     $('#tuichu').on('click', function () {
-        console.log(111);
+        // console.log(111);
         // 二次确认退出
         layer.confirm('真的确定要退出嘛？', { icon: 3, title: '舍不得退出' }, function (index) {
-            console.log(1);
-            localStorage.setItem('token', '')
+            // console.log(1);
+            localStorage.removeItem('token')
             location.href = '../../login.html'
             layer.close(index);
         });
@@ -45,8 +45,10 @@ function getInfo() {
         // },
         success: function (res) {
             console.log(res);
+            localStorage.setItem('userinfo', JSON.stringify(res.data))
             if (res.status === 1) {
                 localStorage.removeItem('token')
+                localStorage.removeItem('userinfo')
                 location.href = '../../login.html'
             }
             // 渲染头像
@@ -58,7 +60,7 @@ function getInfo() {
 // 渲染头像
 function xuanran(res) {
     let pic = res.data.user_pic
-    let uname = res.data.username
+    let uname = res.data.nickname
     $('#welcome i').html(uname)
     if (pic == null) {
         $('.userinfo img').hide()

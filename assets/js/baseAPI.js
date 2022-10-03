@@ -15,5 +15,5 @@ $.ajaxPrefilter(function (options) {
     }
 
 
-    console.log(options.success);
+    // console.log(options.success);
 })
