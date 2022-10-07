@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/article/art_list.css">
+</head>
+
+<body>
+    <div class="layui-card" style="box-shadow:none ;">
+        <div class="layui-card-header">
+            <h2>📃文章列表</h2>
+        </div>
+        <div class="layui-card-body">
+            <!-- 1筛选区域 -->
+            <form class="layui-form" id="form_search">
+                <div class="layui-form-item" style="margin-right: 10px;">
+                    <select name="cate_id">
+                        <!-- 分类模板 -->
+                    </select>
+                </div>
+                <div class="layui-form-item">
+                    <select name="state">
+                        <option value="">所有状态</option>
+                        <option value="已发布">已经发布的了</option>
+                        <option value="草稿">草稿先存起来</option>
+
+                    </select>
+                </div>
+                <div class="layui-form-item" id="shaxuan">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">🔍立即筛选</button>
+
+                    </div>
+                </div>
+            </form>
+
+            <!--2 列表区域 -->
+            <!-- 放入table -->
+            <table class="layui-table" style="text-align: center;">
+                <colgroup>
+                    <col>
+                    <col width="150">
+                    <col width="180">
+                    <col width="150">
+                    <col width="180">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">文章标题</th>
+                        <th style="text-align: center;">分类</th>
+                        <th style="text-align: center;">发表时间</th>
+                        <th style="text-align: center;">状态</th>
+                        <th style="text-align: center;">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+
+            <!-- 3分页区域 -->
+            <div id="page"></div>
+        </div>
+    </div>
+    <!-- 表格内容定义模板引擎 -->
+    <script type="text/html" id="tpl_table">
+        {{each data}}
+<tr>
+    <td>{{$value.title}}</td>
+    <td>{{$value.cate_name}}</td>
+    <td>{{$value.pub_date|dataFormate}}</td>
+    <td>{{$value.state}}</td>
+    <td>
+        <button type="button" class="layui-btn layui-btn-xs btn_edit" data-id={{$value.Id}}>编辑</button>
+        <button type="button" class="layui-btn layui-btn-warm layui-btn-xs btn_delet" data-id={{$value.Id}}>删除</button>
+    </td>
+</tr>
+{{/each}}
+    </script>
+    <!-- 列表分类模板 -->
+    <script type="text/html" id="temp_fenlei">
+    <option value="">所有分类</option>
+    {{each data}}
+    <option value="{{$value.Id}}">{{$value.name}}</option>
+    {{/each}}
+    </script>
+    <!-- 导入js文件 -->
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/js/baseAPI.js"></script>
+    <script src="../assets/lib/template-web.js"></script>
+    <script src="../assets/js/article/art_list.js"></script>
+</body>
+
+</html>

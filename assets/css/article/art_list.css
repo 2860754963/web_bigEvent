@@ -1,0 +1,18 @@
+body {
+    background-color: #7d7079;
+
+}
+
+.layui-card {
+    background-color: #7d7079;
+    padding: 20px;
+}
+
+.layui-card-header {
+    border: 0;
+}
+
+.layui-form {
+    display: flex;
+    justify-content: left;
+}

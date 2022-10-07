@@ -1,0 +1,53 @@
+body {
+    background-color: #7d7079;
+
+}
+
+.layui-card {
+    background-color: #7d7079;
+    padding: 20px;
+    box-shadow: none;
+}
+
+.layui-card-header {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.layui-card-body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.layui-table {
+
+    color: black;
+    background-color: #7d7079;
+}
+
+tr th {
+    text-align: center;
+}
+
+.layui-form {
+    margin-top: 20px;
+    color: #ccc;
+    padding: 20px;
+    background-color: #2b3d51;
+}
+
+.layui-form input,
+.layui-input-block button {
+    border-radius: 10px;
+}
+
+.layui-layer-content,
+.layui-layer-btn {
+    background-color: #2b3d51;
+}
